@@ -33,6 +33,12 @@ namespace project_3_school
             return new List<int> { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
         }
 
+        public List<Button> ov_1_get_buttons()
+        {
+            var ov_2_buttons = new List<Button> { };
+            return ov_2_buttons;
+        }
+
         public List<string> get_month_names()
         {
             return new List<string> { "jan", "feb", "mrt", "apr", "jun", "mei", "jul", "aug", "sept", "okt", "nov", "dec" };
@@ -42,14 +48,6 @@ namespace project_3_school
         {
             var ov_2_buttons = new List<Button> { ov_2_button_2007, ov_2_button_2008, ov_2_button_2009, ov_2_button_2010, ov_2_button_2011, ov_2_button_2012, ov_2_button_2013, ov_2_button_2007, ov_2_button_2014, ov_2_button_2015, ov_2_button_2016, ov_2_button_2017, ov_2_button_all_years };
             return ov_2_buttons;
-
-        }
-
-        public List<Button> ov_1_get_buttons()
-        {
-            var ov_2_buttons = new List<Button> { };
-            return ov_2_buttons;
-
         }
 
         public List<Button> ov_3_get_buttons()
@@ -103,6 +101,13 @@ namespace project_3_school
         {
             hide_ov_2(); // hide other questions
             hide_ov_3(); // hide other questions
+
+            List<Button> ov_1_buttons = ov_1_get_buttons();
+            foreach (var button in ov_1_buttons)
+            {
+                button.Visible = true;
+            }
+
         }
 
         public void show_ov_2()
@@ -138,7 +143,11 @@ namespace project_3_school
             hide_ov_1(); // hide other questions
             hide_ov_2(); // hide other questions
 
-
+            List<Button> ov_3_buttons = ov_3_get_buttons();
+            foreach (var button in ov_3_buttons)
+            {
+                button.Visible = true;
+            }
         }
 
 
