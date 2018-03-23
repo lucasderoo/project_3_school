@@ -154,7 +154,7 @@ namespace project_3_school
         public void ov_2_year_chart(int year)
         {
             empty_chart(this.ov_2_mainchart); // do not forget to empty the chart!!
-            SqlConnection myConnection = create_conn("LUCASPC"); // change "LUCASPC" to your pc name!!
+            SqlConnection myConnection = create_conn("PC-COEN"); // change "LUCASPC" to your pc name!!
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
@@ -194,7 +194,7 @@ namespace project_3_school
         public void ov_2_main_chart()
         {
             empty_chart(this.ov_2_mainchart); // do not forget to empty the chart!!
-            SqlConnection myConnection = create_conn("LUCASPC"); // change "LUCASPC" to your pc name!!
+            SqlConnection myConnection = create_conn("PC-COEN"); // change "LUCASPC" to your pc name!!
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
