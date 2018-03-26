@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.side_bar = new System.Windows.Forms.PictureBox();
             this.top_bar = new System.Windows.Forms.PictureBox();
             this.question_1 = new System.Windows.Forms.Button();
@@ -55,9 +55,20 @@
             this.ov_2_chb_elek = new System.Windows.Forms.CheckBox();
             this.ov_2_chk_hybrid = new System.Windows.Forms.CheckBox();
             this.ov_2_chk_diesel = new System.Windows.Forms.CheckBox();
+            this.ov_2_cataloguswaarde_text = new System.Windows.Forms.TextBox();
+            this.ov_2_catalogus_bar2 = new System.Windows.Forms.TrackBar();
+            this.ov_2_catalogus_bar1 = new System.Windows.Forms.TrackBar();
+            this.ov_2_trackbar1_value = new System.Windows.Forms.Label();
+            this.ov_2_trackbar2_value = new System.Windows.Forms.Label();
+            this.ov_2_price_filter = new System.Windows.Forms.Button();
+            this.ov_2_charbtn_1 = new System.Windows.Forms.Button();
+            this.ov_2_charbtn_2 = new System.Windows.Forms.Button();
+            this.ov_2_charbtn_3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.side_bar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.top_bar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ov_2_mainchart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ov_2_catalogus_bar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ov_2_catalogus_bar1)).BeginInit();
             this.SuspendLayout();
             // 
             // side_bar
@@ -116,26 +127,26 @@
             // 
             // ov_2_mainchart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ov_2_mainchart.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.ov_2_mainchart.ChartAreas.Add(chartArea1);
             this.ov_2_mainchart.Cursor = System.Windows.Forms.Cursors.Default;
-            legend2.Name = "Legend1";
-            this.ov_2_mainchart.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.ov_2_mainchart.Legends.Add(legend1);
             this.ov_2_mainchart.Location = new System.Drawing.Point(295, 71);
             this.ov_2_mainchart.Name = "ov_2_mainchart";
             this.ov_2_mainchart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Hybride";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Elektrisch";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Diesel";
-            this.ov_2_mainchart.Series.Add(series4);
-            this.ov_2_mainchart.Series.Add(series5);
-            this.ov_2_mainchart.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Hybride";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Elektrisch";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Diesel";
+            this.ov_2_mainchart.Series.Add(series1);
+            this.ov_2_mainchart.Series.Add(series2);
+            this.ov_2_mainchart.Series.Add(series3);
             this.ov_2_mainchart.Size = new System.Drawing.Size(747, 363);
             this.ov_2_mainchart.TabIndex = 5;
             this.ov_2_mainchart.Text = "chart1";
@@ -352,12 +363,129 @@
             this.ov_2_chk_diesel.Visible = false;
             this.ov_2_chk_diesel.CheckedChanged += new System.EventHandler(this.ov_2_chb_elek_CheckedChanged);
             // 
+            // ov_2_cataloguswaarde_text
+            // 
+            this.ov_2_cataloguswaarde_text.BackColor = System.Drawing.Color.Peru;
+            this.ov_2_cataloguswaarde_text.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ov_2_cataloguswaarde_text.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ov_2_cataloguswaarde_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ov_2_cataloguswaarde_text.ForeColor = System.Drawing.Color.White;
+            this.ov_2_cataloguswaarde_text.Location = new System.Drawing.Point(584, 465);
+            this.ov_2_cataloguswaarde_text.Name = "ov_2_cataloguswaarde_text";
+            this.ov_2_cataloguswaarde_text.Size = new System.Drawing.Size(273, 40);
+            this.ov_2_cataloguswaarde_text.TabIndex = 21;
+            this.ov_2_cataloguswaarde_text.Text = "Cataloguswaarde";
+            this.ov_2_cataloguswaarde_text.Visible = false;
+            this.ov_2_cataloguswaarde_text.WordWrap = false;
+            // 
+            // ov_2_catalogus_bar2
+            // 
+            this.ov_2_catalogus_bar2.LargeChange = 1;
+            this.ov_2_catalogus_bar2.Location = new System.Drawing.Point(763, 532);
+            this.ov_2_catalogus_bar2.Maximum = 40;
+            this.ov_2_catalogus_bar2.Name = "ov_2_catalogus_bar2";
+            this.ov_2_catalogus_bar2.Size = new System.Drawing.Size(175, 45);
+            this.ov_2_catalogus_bar2.TabIndex = 22;
+            this.ov_2_catalogus_bar2.Value = 40;
+            this.ov_2_catalogus_bar2.Visible = false;
+            this.ov_2_catalogus_bar2.Scroll += new System.EventHandler(this.ov_2_catalogus_bar1_Scroll);
+            // 
+            // ov_2_catalogus_bar1
+            // 
+            this.ov_2_catalogus_bar1.LargeChange = 1;
+            this.ov_2_catalogus_bar1.Location = new System.Drawing.Point(446, 532);
+            this.ov_2_catalogus_bar1.Maximum = 40;
+            this.ov_2_catalogus_bar1.Name = "ov_2_catalogus_bar1";
+            this.ov_2_catalogus_bar1.Size = new System.Drawing.Size(177, 45);
+            this.ov_2_catalogus_bar1.TabIndex = 28;
+            this.ov_2_catalogus_bar1.Visible = false;
+            this.ov_2_catalogus_bar1.Scroll += new System.EventHandler(this.ov_2_catalogus_bar2_Scroll);
+            // 
+            // ov_2_trackbar1_value
+            // 
+            this.ov_2_trackbar1_value.AutoSize = true;
+            this.ov_2_trackbar1_value.Location = new System.Drawing.Point(650, 544);
+            this.ov_2_trackbar1_value.Name = "ov_2_trackbar1_value";
+            this.ov_2_trackbar1_value.Size = new System.Drawing.Size(13, 13);
+            this.ov_2_trackbar1_value.TabIndex = 24;
+            this.ov_2_trackbar1_value.Text = "0";
+            this.ov_2_trackbar1_value.Visible = false;
+            // 
+            // ov_2_trackbar2_value
+            // 
+            this.ov_2_trackbar2_value.AutoSize = true;
+            this.ov_2_trackbar2_value.Location = new System.Drawing.Point(701, 544);
+            this.ov_2_trackbar2_value.Name = "ov_2_trackbar2_value";
+            this.ov_2_trackbar2_value.Size = new System.Drawing.Size(43, 13);
+            this.ov_2_trackbar2_value.TabIndex = 25;
+            this.ov_2_trackbar2_value.Text = "200000";
+            this.ov_2_trackbar2_value.Visible = false;
+            // 
+            // ov_2_price_filter
+            // 
+            this.ov_2_price_filter.Location = new System.Drawing.Point(653, 577);
+            this.ov_2_price_filter.Name = "ov_2_price_filter";
+            this.ov_2_price_filter.Size = new System.Drawing.Size(91, 23);
+            this.ov_2_price_filter.TabIndex = 29;
+            this.ov_2_price_filter.Text = "filter";
+            this.ov_2_price_filter.UseVisualStyleBackColor = true;
+            this.ov_2_price_filter.Visible = false;
+            this.ov_2_price_filter.Click += new System.EventHandler(this.ov_2_price_filter_Click);
+            // 
+            // ov_2_charbtn_1
+            // 
+            this.ov_2_charbtn_1.BackColor = System.Drawing.Color.Gainsboro;
+            this.ov_2_charbtn_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ov_2_charbtn_1.Location = new System.Drawing.Point(306, 99);
+            this.ov_2_charbtn_1.Name = "ov_2_charbtn_1";
+            this.ov_2_charbtn_1.Size = new System.Drawing.Size(21, 23);
+            this.ov_2_charbtn_1.TabIndex = 30;
+            this.ov_2_charbtn_1.Text = "1";
+            this.ov_2_charbtn_1.UseVisualStyleBackColor = false;
+            this.ov_2_charbtn_1.Visible = false;
+            this.ov_2_charbtn_1.Click += new System.EventHandler(this.ov_2_charbtn_1_Click);
+            // 
+            // ov_2_charbtn_2
+            // 
+            this.ov_2_charbtn_2.BackColor = System.Drawing.Color.Gainsboro;
+            this.ov_2_charbtn_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ov_2_charbtn_2.Location = new System.Drawing.Point(306, 138);
+            this.ov_2_charbtn_2.Name = "ov_2_charbtn_2";
+            this.ov_2_charbtn_2.Size = new System.Drawing.Size(21, 23);
+            this.ov_2_charbtn_2.TabIndex = 31;
+            this.ov_2_charbtn_2.Text = "2";
+            this.ov_2_charbtn_2.UseVisualStyleBackColor = false;
+            this.ov_2_charbtn_2.Visible = false;
+            this.ov_2_charbtn_2.Click += new System.EventHandler(this.ov_2_charbtn_2_Click);
+            // 
+            // ov_2_charbtn_3
+            // 
+            this.ov_2_charbtn_3.BackColor = System.Drawing.Color.Gainsboro;
+            this.ov_2_charbtn_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ov_2_charbtn_3.Location = new System.Drawing.Point(306, 179);
+            this.ov_2_charbtn_3.Name = "ov_2_charbtn_3";
+            this.ov_2_charbtn_3.Size = new System.Drawing.Size(21, 23);
+            this.ov_2_charbtn_3.TabIndex = 32;
+            this.ov_2_charbtn_3.Text = "3";
+            this.ov_2_charbtn_3.UseVisualStyleBackColor = false;
+            this.ov_2_charbtn_3.Visible = false;
+            this.ov_2_charbtn_3.Click += new System.EventHandler(this.ov_2_charbtn_3_Click);
+            // 
             // project_3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(1054, 612);
+            this.Controls.Add(this.ov_2_charbtn_3);
+            this.Controls.Add(this.ov_2_charbtn_2);
+            this.Controls.Add(this.ov_2_charbtn_1);
+            this.Controls.Add(this.ov_2_price_filter);
+            this.Controls.Add(this.ov_2_trackbar2_value);
+            this.Controls.Add(this.ov_2_trackbar1_value);
+            this.Controls.Add(this.ov_2_catalogus_bar1);
+            this.Controls.Add(this.ov_2_catalogus_bar2);
+            this.Controls.Add(this.ov_2_cataloguswaarde_text);
             this.Controls.Add(this.ov_2_chk_diesel);
             this.Controls.Add(this.ov_2_chk_hybrid);
             this.Controls.Add(this.ov_2_chb_elek);
@@ -385,6 +513,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.side_bar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.top_bar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ov_2_mainchart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ov_2_catalogus_bar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ov_2_catalogus_bar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,6 +544,15 @@
         private System.Windows.Forms.CheckBox ov_2_chb_elek;
         private System.Windows.Forms.CheckBox ov_2_chk_hybrid;
         private System.Windows.Forms.CheckBox ov_2_chk_diesel;
+        private System.Windows.Forms.TextBox ov_2_cataloguswaarde_text;
+        private System.Windows.Forms.TrackBar ov_2_catalogus_bar2;
+        private System.Windows.Forms.TrackBar ov_2_catalogus_bar1;
+        private System.Windows.Forms.Label ov_2_trackbar1_value;
+        private System.Windows.Forms.Label ov_2_trackbar2_value;
+        private System.Windows.Forms.Button ov_2_price_filter;
+        private System.Windows.Forms.Button ov_2_charbtn_1;
+        private System.Windows.Forms.Button ov_2_charbtn_2;
+        private System.Windows.Forms.Button ov_2_charbtn_3;
     }
 }
 
