@@ -35,7 +35,7 @@ namespace project_3_school
 
         public List<Button> ov_1_get_buttons()
         {
-            var ov_2_buttons = new List<Button> { };
+            var ov_2_buttons = new List<Button> { ov_1_fullchart_button, ov_1_co2_chart_button };
             return ov_2_buttons;
         }
 
@@ -72,6 +72,14 @@ namespace project_3_school
             {
                 button.Visible = false;
             }
+
+            this.ov_1_mainchart.Visible = false;
+            this.ov_1_maintb.Visible = false;
+            this.ov_1_checkbox_benzin.Visible = false;
+            this.ov_1_checkbox_diesel.Visible = false;
+            this.ov_1_checkbox_electric.Visible = false;
+            this.ov_1_selected_year_label.Visible = false;
+            this.ov_1_select_chart.Visible = false; 
         }
 
         public void hide_ov_2()
@@ -103,6 +111,13 @@ namespace project_3_school
                 button.Visible = true;
             }
 
+            this.ov_1_mainchart.Visible = true;
+            this.ov_1_maintb.Visible = true;
+            this.ov_1_checkbox_benzin.Visible = true;
+            this.ov_1_checkbox_diesel.Visible = true;
+            this.ov_1_checkbox_electric.Visible = true;
+            this.ov_1_selected_year_label.Visible = true;
+            this.ov_1_select_chart.Visible = true;
         }
 
         public void show_ov_2()
@@ -130,6 +145,63 @@ namespace project_3_school
             }
         }
 
+        public void ov_1_main_chart()
+        {
+            empty_chart(this.ov_1_mainchart);
+            SqlConnection con = create_conn("PC-COEN");
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con;
+
+            for (int i = 2007; i <= 2017; i++)
+            {
+                cmd.CommandText = "SELECT SUM(CAST(quantity_electric as int) + CAST(quantity_hybrid as int)) FROM carByMonth  WHERE year = '" + i.ToString() + "'";
+                Int32 result1 = (Int32)cmd.ExecuteScalar();
+
+                cmd.CommandText = "SELECT SUM(CAST(quantity_diesel as int)) FROM carByMonth  WHERE year = '" + i.ToString() + "'";
+                Int32 result2 = (Int32)cmd.ExecuteScalar();
+
+
+                cmd.CommandText = "SELECT SUM(CAST(quantity as int) - CAST(quantity_hybrid as int) - CAST(quantity_electric as int) - CAST(quantity_diesel as int)) FROM carByMonth  WHERE year = '" + i.ToString() + "'";
+                Int32 result3 = (Int32)cmd.ExecuteScalar();
+
+                this.ov_1_mainchart.Series["Elektrisch/hybride"].Points.AddXY(i.ToString(), result1);
+                this.ov_1_mainchart.Series["Diesel"].Points.AddXY(i.ToString(), result2);
+                this.ov_1_mainchart.Series["Benzine"].Points.AddXY(i.ToString(), result3);
+
+            }
+            con.Close();
+            ov_1_selected_year_label.Text = "2007-2017";
+            this.ov_1_mainchart.Titles["JaarTitel"].Text = "2007-2017";
+        }
+
+        public void ov_1_full_co2_chart()
+        {
+            empty_chart(this.ov_1_mainchart);
+            SqlConnection con = create_conn("PC-COEN");
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con;
+
+            for (int i = 2007; i <= 2017; i++)
+            {
+                cmd.CommandText = "SELECT SUM(CAST(bensin_co2 as int)) FROM carByMonth  WHERE year = '" + i.ToString() + "'";
+                Int32 result1 = (Int32)cmd.ExecuteScalar();
+
+                cmd.CommandText = "SELECT SUM(CAST(diesel_co2 as int)) FROM carByMonth  WHERE year = '" + i.ToString() + "'";
+                Int32 result2 = (Int32)cmd.ExecuteScalar();
+
+                this.ov_1_mainchart.Series["Co2_benzine"].Points.AddXY(i.ToString(), result1);
+                this.ov_1_mainchart.Series["Co2_diesel"].Points.AddXY(i.ToString(), result2);
+
+            }
+            con.Close();
+            ov_1_selected_year_label.Text = "2007-2017";
+            this.ov_1_mainchart.Titles["JaarTitel"].Text = "2007-2017";          
+        }
+        
         void clear_ov_button_colors()
         {
             this.question_1.BackColor = System.Drawing.Color.White;
@@ -155,6 +227,66 @@ namespace project_3_school
             clear_ov_button_colors();
             this.question_3.BackColor = System.Drawing.Color.Yellow;
             show_ov_3();
+        }
+
+        private void ov_1_maintb_Scroll(object sender, EventArgs e)
+        {
+            ov_1_selected_year_label.Text = ov_1_maintb.Value.ToString();
+
+            for (int jaar = 2007; jaar <= 2017; jaar++)
+            {
+                if (ov_1_maintb.Value == jaar)
+                {
+                    this.ov_1_mainchart.Titles["JaarTitel"].Text = jaar.ToString();
+                }
+            }
+        }
+
+        private void ov_1_fullchart_button_Click(object sender, EventArgs e)
+        {
+            ov_1_main_chart();
+        }
+
+        private void ov_1_co2_chart_button_Click(object sender, EventArgs e)
+        {
+            ov_1_full_co2_chart();
+        }
+
+        private void ov_1_checkbox_electric_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ov_1_checkbox_electric.Checked)
+            {
+                this.ov_1_mainchart.Series["Elektrisch/hybride"].Color = Color.DodgerBlue;
+            }
+            else
+            {
+                this.ov_1_mainchart.Series["Elektrisch/hybride"].Color = Color.Transparent;
+            }
+
+        }
+
+        private void ov_1_checkbox_diesel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ov_1_checkbox_diesel.Checked)
+            {
+                this.ov_1_mainchart.Series["Diesel"].Color = Color.OrangeRed;
+            }
+            else
+            {
+                this.ov_1_mainchart.Series["Diesel"].Color = Color.Transparent;
+            }
+        }
+
+        private void ov_1_checkbox_benzin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ov_1_checkbox_benzin.Checked)
+            {
+                this.ov_1_mainchart.Series["Benzine"].Color = Color.Orange;
+            }
+            else
+            {
+                this.ov_1_mainchart.Series["Benzine"].Color = Color.Transparent;
+            }
         }
     }
 }
