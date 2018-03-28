@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series33 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series34 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series35 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series36 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series37 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series38 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series39 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series40 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.side_bar = new System.Windows.Forms.PictureBox();
             this.top_bar = new System.Windows.Forms.PictureBox();
             this.question_1 = new System.Windows.Forms.Button();
@@ -50,7 +50,6 @@
             this.ov_1_checkbox_benzin = new System.Windows.Forms.CheckBox();
             this.ov_1_checkbox_diesel = new System.Windows.Forms.CheckBox();
             this.ov_1_checkbox_electric = new System.Windows.Forms.CheckBox();
-            this.ov_1_select_chart = new System.Windows.Forms.ComboBox();
             this.ov_1_maintb = new System.Windows.Forms.TrackBar();
             this.ov_1_selected_year_label = new System.Windows.Forms.Label();
             this.ov_1_mainchart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -160,7 +159,7 @@
             this.ov_1_checkbox_benzin.AutoSize = true;
             this.ov_1_checkbox_benzin.Checked = true;
             this.ov_1_checkbox_benzin.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ov_1_checkbox_benzin.Location = new System.Drawing.Point(1164, 717);
+            this.ov_1_checkbox_benzin.Location = new System.Drawing.Point(1164, 689);
             this.ov_1_checkbox_benzin.Name = "ov_1_checkbox_benzin";
             this.ov_1_checkbox_benzin.Size = new System.Drawing.Size(81, 21);
             this.ov_1_checkbox_benzin.TabIndex = 23;
@@ -174,7 +173,7 @@
             this.ov_1_checkbox_diesel.AutoSize = true;
             this.ov_1_checkbox_diesel.Checked = true;
             this.ov_1_checkbox_diesel.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ov_1_checkbox_diesel.Location = new System.Drawing.Point(1164, 690);
+            this.ov_1_checkbox_diesel.Location = new System.Drawing.Point(1164, 662);
             this.ov_1_checkbox_diesel.Name = "ov_1_checkbox_diesel";
             this.ov_1_checkbox_diesel.Size = new System.Drawing.Size(69, 21);
             this.ov_1_checkbox_diesel.TabIndex = 22;
@@ -188,7 +187,7 @@
             this.ov_1_checkbox_electric.AutoSize = true;
             this.ov_1_checkbox_electric.Checked = true;
             this.ov_1_checkbox_electric.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ov_1_checkbox_electric.Location = new System.Drawing.Point(1164, 665);
+            this.ov_1_checkbox_electric.Location = new System.Drawing.Point(1164, 635);
             this.ov_1_checkbox_electric.Name = "ov_1_checkbox_electric";
             this.ov_1_checkbox_electric.Size = new System.Drawing.Size(142, 21);
             this.ov_1_checkbox_electric.TabIndex = 21;
@@ -197,25 +196,10 @@
             this.ov_1_checkbox_electric.Visible = false;
             this.ov_1_checkbox_electric.CheckedChanged += new System.EventHandler(this.ov_1_checkbox_electric_CheckedChanged);
             // 
-            // ov_1_select_chart
-            // 
-            this.ov_1_select_chart.DisplayMember = "sadas";
-            this.ov_1_select_chart.FormattingEnabled = true;
-            this.ov_1_select_chart.Items.AddRange(new object[] {
-            "Aantal auto\'s",
-            "Co2"});
-            this.ov_1_select_chart.Location = new System.Drawing.Point(1164, 635);
-            this.ov_1_select_chart.Name = "ov_1_select_chart";
-            this.ov_1_select_chart.Size = new System.Drawing.Size(121, 24);
-            this.ov_1_select_chart.TabIndex = 24;
-            this.ov_1_select_chart.Tag = "";
-            this.ov_1_select_chart.Text = "Aantal auto\'s";
-            this.ov_1_select_chart.Visible = false;
-            // 
             // ov_1_maintb
             // 
             this.ov_1_maintb.Location = new System.Drawing.Point(217, 573);
-            this.ov_1_maintb.Maximum = 2017;
+            this.ov_1_maintb.Maximum = 2016;
             this.ov_1_maintb.Minimum = 2007;
             this.ov_1_maintb.Name = "ov_1_maintb";
             this.ov_1_maintb.Size = new System.Drawing.Size(928, 56);
@@ -237,58 +221,63 @@
             // 
             // ov_1_mainchart
             // 
-            chartArea5.Name = "ChartArea1";
-            this.ov_1_mainchart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.ov_1_mainchart.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.ov_1_mainchart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ov_1_mainchart.Legends.Add(legend1);
             this.ov_1_mainchart.Location = new System.Drawing.Point(199, 77);
             this.ov_1_mainchart.Name = "ov_1_mainchart";
-            series33.ChartArea = "ChartArea1";
-            series33.Color = System.Drawing.Color.DodgerBlue;
-            series33.Legend = "Legend1";
-            series33.Name = "Elektrisch/hybride";
-            series33.XValueMember = "Jaar";
-            series33.YValueMembers = "Aantal auto\'s";
-            series34.ChartArea = "ChartArea1";
-            series34.Color = System.Drawing.Color.Orange;
-            series34.Legend = "Legend1";
-            series34.Name = "Benzine";
-            series35.ChartArea = "ChartArea1";
-            series35.Color = System.Drawing.Color.OrangeRed;
-            series35.Legend = "Legend1";
-            series35.Name = "Diesel";
-            series36.ChartArea = "ChartArea1";
-            series36.Legend = "Legend1";
-            series36.Name = "Top 1";
-            series37.ChartArea = "ChartArea1";
-            series37.Legend = "Legend1";
-            series37.Name = "Top 2";
-            series38.ChartArea = "ChartArea1";
-            series38.Legend = "Legend1";
-            series38.Name = "Top 3";
-            series39.ChartArea = "ChartArea1";
-            series39.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series39.Color = System.Drawing.Color.Purple;
-            series39.Legend = "Legend1";
-            series39.Name = "Co2_benzine";
-            series40.ChartArea = "ChartArea1";
-            series40.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series40.Legend = "Legend1";
-            series40.Name = "Co2_diesel";
-            this.ov_1_mainchart.Series.Add(series33);
-            this.ov_1_mainchart.Series.Add(series34);
-            this.ov_1_mainchart.Series.Add(series35);
-            this.ov_1_mainchart.Series.Add(series36);
-            this.ov_1_mainchart.Series.Add(series37);
-            this.ov_1_mainchart.Series.Add(series38);
-            this.ov_1_mainchart.Series.Add(series39);
-            this.ov_1_mainchart.Series.Add(series40);
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.DodgerBlue;
+            series1.Legend = "Legend1";
+            series1.Name = "Elektrisch/hybride";
+            series1.XValueMember = "Jaar";
+            series1.YValueMembers = "Aantal auto\'s";
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.Orange;
+            series2.Legend = "Legend1";
+            series2.Name = "Benzine";
+            series3.ChartArea = "ChartArea1";
+            series3.Color = System.Drawing.Color.OrangeRed;
+            series3.Legend = "Legend1";
+            series3.Name = "Diesel";
+            series4.ChartArea = "ChartArea1";
+            series4.Color = System.Drawing.Color.Green;
+            series4.Legend = "Legend1";
+            series4.Name = "Top 1";
+            series5.ChartArea = "ChartArea1";
+            series5.Color = System.Drawing.Color.Purple;
+            series5.Legend = "Legend1";
+            series5.Name = "Top 2";
+            series6.ChartArea = "ChartArea1";
+            series6.Color = System.Drawing.Color.Pink;
+            series6.Legend = "Legend1";
+            series6.Name = "Top 3";
+            series7.BorderWidth = 3;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Color = System.Drawing.Color.Purple;
+            series7.Legend = "Legend1";
+            series7.Name = "Co2_benzine";
+            series8.BorderWidth = 3;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.Legend = "Legend1";
+            series8.Name = "Co2_diesel";
+            this.ov_1_mainchart.Series.Add(series1);
+            this.ov_1_mainchart.Series.Add(series2);
+            this.ov_1_mainchart.Series.Add(series3);
+            this.ov_1_mainchart.Series.Add(series4);
+            this.ov_1_mainchart.Series.Add(series5);
+            this.ov_1_mainchart.Series.Add(series6);
+            this.ov_1_mainchart.Series.Add(series7);
+            this.ov_1_mainchart.Series.Add(series8);
             this.ov_1_mainchart.Size = new System.Drawing.Size(1174, 438);
             this.ov_1_mainchart.TabIndex = 27;
             this.ov_1_mainchart.Text = "chart1";
-            title5.Name = "JaarTitel";
-            title5.Text = "Jaar...";
-            this.ov_1_mainchart.Titles.Add(title5);
+            title1.Name = "JaarTitel";
+            title1.Text = "Jaar...";
+            this.ov_1_mainchart.Titles.Add(title1);
             this.ov_1_mainchart.Visible = false;
             // 
             // project_3
@@ -300,7 +289,6 @@
             this.Controls.Add(this.ov_1_mainchart);
             this.Controls.Add(this.ov_1_selected_year_label);
             this.Controls.Add(this.ov_1_maintb);
-            this.Controls.Add(this.ov_1_select_chart);
             this.Controls.Add(this.ov_1_checkbox_benzin);
             this.Controls.Add(this.ov_1_checkbox_diesel);
             this.Controls.Add(this.ov_1_checkbox_electric);
@@ -337,7 +325,6 @@
         private System.Windows.Forms.CheckBox ov_1_checkbox_benzin;
         private System.Windows.Forms.CheckBox ov_1_checkbox_diesel;
         private System.Windows.Forms.CheckBox ov_1_checkbox_electric;
-        private System.Windows.Forms.ComboBox ov_1_select_chart;
         private System.Windows.Forms.TrackBar ov_1_maintb;
         private System.Windows.Forms.Label ov_1_selected_year_label;
         private System.Windows.Forms.DataVisualization.Charting.Chart ov_1_mainchart;

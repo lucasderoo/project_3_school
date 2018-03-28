@@ -79,7 +79,6 @@ namespace project_3_school
             this.ov_1_checkbox_diesel.Visible = false;
             this.ov_1_checkbox_electric.Visible = false;
             this.ov_1_selected_year_label.Visible = false;
-            this.ov_1_select_chart.Visible = false; 
         }
 
         public void hide_ov_2()
@@ -104,6 +103,7 @@ namespace project_3_school
         {
             hide_ov_2(); // hide other questions
             hide_ov_3(); // hide other questions
+            this.ov_1_selected_year_label.Visible = true;
 
             List<Button> ov_1_buttons = ov_1_get_buttons();
             foreach (var button in ov_1_buttons)
@@ -115,9 +115,7 @@ namespace project_3_school
             this.ov_1_maintb.Visible = true;
             this.ov_1_checkbox_benzin.Visible = true;
             this.ov_1_checkbox_diesel.Visible = true;
-            this.ov_1_checkbox_electric.Visible = true;
-            this.ov_1_selected_year_label.Visible = true;
-            this.ov_1_select_chart.Visible = true;
+            this.ov_1_checkbox_electric.Visible = true;        
         }
 
         public void show_ov_2()
@@ -154,7 +152,7 @@ namespace project_3_school
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con;
 
-            for (int i = 2007; i <= 2017; i++)
+            for (int i = 2007; i <= 2016; i++)
             {
                 cmd.CommandText = "SELECT SUM(CAST(quantity_electric as int) + CAST(quantity_hybrid as int)) FROM carByMonth  WHERE year = '" + i.ToString() + "'";
                 Int32 result1 = (Int32)cmd.ExecuteScalar();
@@ -166,14 +164,16 @@ namespace project_3_school
                 cmd.CommandText = "SELECT SUM(CAST(quantity as int) - CAST(quantity_hybrid as int) - CAST(quantity_electric as int) - CAST(quantity_diesel as int)) FROM carByMonth  WHERE year = '" + i.ToString() + "'";
                 Int32 result3 = (Int32)cmd.ExecuteScalar();
 
+                this.ov_1_mainchart.ChartAreas["ChartArea1"].AxisX.Interval = 1;
+
                 this.ov_1_mainchart.Series["Elektrisch/hybride"].Points.AddXY(i.ToString(), result1);
                 this.ov_1_mainchart.Series["Diesel"].Points.AddXY(i.ToString(), result2);
                 this.ov_1_mainchart.Series["Benzine"].Points.AddXY(i.ToString(), result3);
 
             }
             con.Close();
-            ov_1_selected_year_label.Text = "2007-2017";
-            this.ov_1_mainchart.Titles["JaarTitel"].Text = "2007-2017";
+            ov_1_selected_year_label.Text = "2007-2016";
+            this.ov_1_mainchart.Titles["JaarTitel"].Text = "2007-2016";
         }
 
         public void ov_1_full_co2_chart()
@@ -185,7 +185,7 @@ namespace project_3_school
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con;
 
-            for (int i = 2007; i <= 2017; i++)
+            for (int i = 2007; i <= 2016; i++)
             {
                 cmd.CommandText = "SELECT SUM(CAST(bensin_co2 as int)) FROM carByMonth  WHERE year = '" + i.ToString() + "'";
                 Int32 result1 = (Int32)cmd.ExecuteScalar();
@@ -198,8 +198,8 @@ namespace project_3_school
 
             }
             con.Close();
-            ov_1_selected_year_label.Text = "2007-2017";
-            this.ov_1_mainchart.Titles["JaarTitel"].Text = "2007-2017";          
+            ov_1_selected_year_label.Text = "2007-2016";
+            this.ov_1_mainchart.Titles["JaarTitel"].Text = "2007-2016";          
         }
         
         void clear_ov_button_colors()
@@ -231,15 +231,29 @@ namespace project_3_school
 
         private void ov_1_maintb_Scroll(object sender, EventArgs e)
         {
-            ov_1_selected_year_label.Text = ov_1_maintb.Value.ToString();
+            SqlConnection con = create_conn("PC-COEN");
 
-            for (int jaar = 2007; jaar <= 2017; jaar++)
-            {
-                if (ov_1_maintb.Value == jaar)
-                {
-                    this.ov_1_mainchart.Titles["JaarTitel"].Text = jaar.ToString();
-                }
-            }
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con;
+
+            empty_chart(ov_1_mainchart);
+            cmd.CommandText = "SELECT SUM(CAST(quantity_electric as int) + CAST(quantity_hybrid as int)) FROM carByMonth  WHERE year = '" + ov_1_maintb.Value + "'";
+            Int32 result1 = (Int32)cmd.ExecuteScalar();
+
+            cmd.CommandText = "SELECT SUM(CAST(quantity_diesel as int)) FROM carByMonth  WHERE year = '" + ov_1_maintb.Value + "'";
+            Int32 result2 = (Int32)cmd.ExecuteScalar();
+
+
+            cmd.CommandText = "SELECT SUM(CAST(quantity as int) - CAST(quantity_hybrid as int) - CAST(quantity_electric as int) - CAST(quantity_diesel as int)) FROM carByMonth  WHERE year = '" + ov_1_maintb.Value + "'";
+            Int32 result3 = (Int32)cmd.ExecuteScalar();
+
+            this.ov_1_mainchart.Series["Elektrisch/hybride"].Points.AddXY(ov_1_maintb.Value, result1);
+            this.ov_1_mainchart.Series["Diesel"].Points.AddXY(ov_1_maintb.Value, result2);
+            this.ov_1_mainchart.Series["Benzine"].Points.AddXY(ov_1_maintb.Value, result3);
+            this.ov_1_mainchart.ChartAreas["ChartArea1"].AxisX.Interval = 1;
+
+            
         }
 
         private void ov_1_fullchart_button_Click(object sender, EventArgs e)
