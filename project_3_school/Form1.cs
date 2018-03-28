@@ -123,6 +123,8 @@ namespace project_3_school
             hide_ov_1(); // hide other questions
             hide_ov_3(); // hide other questions
 
+            this.ov_2_mainchart.ChartAreas["ChartArea1"].AxisX.Interval = 1;
+
             List<Button> ov_2_buttons = ov_2_get_buttons();
             foreach (var button in ov_2_buttons)
             {
