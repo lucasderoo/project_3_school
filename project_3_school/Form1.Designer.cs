@@ -1,4 +1,7 @@
-﻿namespace project_3_school
+﻿using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+
+namespace project_3_school
 {
     partial class project_3
     {
@@ -28,22 +31,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(project_3));
             this.side_bar = new System.Windows.Forms.PictureBox();
             this.top_bar = new System.Windows.Forms.PictureBox();
             this.question_1 = new System.Windows.Forms.Button();
@@ -83,6 +91,26 @@
             this.ov_1_selected_year_label = new System.Windows.Forms.Label();
             this.ov_2_mainchart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ov_1_mainchart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button_top5 = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.checkBox2012_2 = new System.Windows.Forms.CheckBox();
+            this.checkBox2013_2 = new System.Windows.Forms.CheckBox();
+            this.checkBox2015_2 = new System.Windows.Forms.CheckBox();
+            this.checkBox2014_2 = new System.Windows.Forms.CheckBox();
+            this.checkBox2017_2 = new System.Windows.Forms.CheckBox();
+            this.checkBox2016_2 = new System.Windows.Forms.CheckBox();
+            this.checkBox2012_2017 = new System.Windows.Forms.CheckBox();
+            this.checkBox2017_1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2016_1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2015_1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2014_1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2013_1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2012_1 = new System.Windows.Forms.CheckBox();
+            this.button_load_chart = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button_show_cars = new System.Windows.Forms.Button();
+            this.button_back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.side_bar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.top_bar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ov_2_catalogus_bar2)).BeginInit();
@@ -90,6 +118,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ov_1_maintb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ov_2_mainchart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ov_1_mainchart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // side_bar
@@ -98,18 +129,18 @@
             this.side_bar.Location = new System.Drawing.Point(0, -1);
             this.side_bar.Margin = new System.Windows.Forms.Padding(2);
             this.side_bar.Name = "side_bar";
-            this.side_bar.Size = new System.Drawing.Size(142, 620);
-            this.side_bar.TabIndex = 0;
+            this.side_bar.Size = new System.Drawing.Size(144, 614);
+            this.side_bar.TabIndex = 1;
             this.side_bar.TabStop = false;
             // 
             // top_bar
             // 
             this.top_bar.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.top_bar.Location = new System.Drawing.Point(104, -1);
+            this.top_bar.Location = new System.Drawing.Point(138, -1);
             this.top_bar.Margin = new System.Windows.Forms.Padding(2);
             this.top_bar.Name = "top_bar";
-            this.top_bar.Size = new System.Drawing.Size(969, 47);
-            this.top_bar.TabIndex = 1;
+            this.top_bar.Size = new System.Drawing.Size(921, 58);
+            this.top_bar.TabIndex = 2;
             this.top_bar.TabStop = false;
             // 
             // question_1
@@ -591,24 +622,24 @@
             // 
             // ov_2_mainchart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.ov_2_mainchart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.ov_2_mainchart.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.ov_2_mainchart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ov_2_mainchart.Legends.Add(legend1);
             this.ov_2_mainchart.Location = new System.Drawing.Point(251, 58);
             this.ov_2_mainchart.Name = "ov_2_mainchart";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Elektrisch";
-            series13.ChartArea = "ChartArea1";
-            series13.Legend = "Legend1";
-            series13.Name = "Hybride";
-            series14.ChartArea = "ChartArea1";
-            series14.Legend = "Legend1";
-            series14.Name = "Diesel";
-            this.ov_2_mainchart.Series.Add(series12);
-            this.ov_2_mainchart.Series.Add(series13);
-            this.ov_2_mainchart.Series.Add(series14);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Elektrisch";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Hybride";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Diesel";
+            this.ov_2_mainchart.Series.Add(series1);
+            this.ov_2_mainchart.Series.Add(series2);
+            this.ov_2_mainchart.Series.Add(series3);
             this.ov_2_mainchart.Size = new System.Drawing.Size(791, 294);
             this.ov_2_mainchart.TabIndex = 33;
             this.ov_2_mainchart.Text = "chart1";
@@ -616,52 +647,311 @@
             // 
             // ov_1_mainchart
             // 
-            chartArea4.Name = "ChartArea1";
-            this.ov_1_mainchart.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.ov_1_mainchart.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.ov_1_mainchart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.ov_1_mainchart.Legends.Add(legend2);
             this.ov_1_mainchart.Location = new System.Drawing.Point(163, 57);
             this.ov_1_mainchart.Name = "ov_1_mainchart";
-            series15.ChartArea = "ChartArea1";
-            series15.Legend = "Legend1";
-            series15.Name = "Elektrisch/hybride";
-            series16.ChartArea = "ChartArea1";
-            series16.Legend = "Legend1";
-            series16.Name = "Benzine";
-            series17.ChartArea = "ChartArea1";
-            series17.Legend = "Legend1";
-            series17.Name = "Diesel";
-            series18.ChartArea = "ChartArea1";
-            series18.Legend = "Legend1";
-            series18.Name = "Top 1";
-            series19.ChartArea = "ChartArea1";
-            series19.Legend = "Legend1";
-            series19.Name = "Top 2";
-            series20.ChartArea = "ChartArea1";
-            series20.Legend = "Legend1";
-            series20.Name = "Top 3";
-            series21.ChartArea = "ChartArea1";
-            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series21.Legend = "Legend1";
-            series21.Name = "Co2_benzine";
-            series22.ChartArea = "ChartArea1";
-            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series22.Legend = "Legend1";
-            series22.Name = "Co2_diesel";
-            this.ov_1_mainchart.Series.Add(series15);
-            this.ov_1_mainchart.Series.Add(series16);
-            this.ov_1_mainchart.Series.Add(series17);
-            this.ov_1_mainchart.Series.Add(series18);
-            this.ov_1_mainchart.Series.Add(series19);
-            this.ov_1_mainchart.Series.Add(series20);
-            this.ov_1_mainchart.Series.Add(series21);
-            this.ov_1_mainchart.Series.Add(series22);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Elektrisch/hybride";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Benzine";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Diesel";
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Top 1";
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Top 2";
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Top 3";
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series10.Legend = "Legend1";
+            series10.Name = "Co2_benzine";
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series11.Legend = "Legend1";
+            series11.Name = "Co2_diesel";
+            this.ov_1_mainchart.Series.Add(series4);
+            this.ov_1_mainchart.Series.Add(series5);
+            this.ov_1_mainchart.Series.Add(series6);
+            this.ov_1_mainchart.Series.Add(series7);
+            this.ov_1_mainchart.Series.Add(series8);
+            this.ov_1_mainchart.Series.Add(series9);
+            this.ov_1_mainchart.Series.Add(series10);
+            this.ov_1_mainchart.Series.Add(series11);
             this.ov_1_mainchart.Size = new System.Drawing.Size(867, 361);
             this.ov_1_mainchart.TabIndex = 34;
             this.ov_1_mainchart.Text = "chart1";
-            title2.Name = "JaarTitel";
-            this.ov_1_mainchart.Titles.Add(title2);
+            title1.Name = "JaarTitel";
+            this.ov_1_mainchart.Titles.Add(title1);
             this.ov_1_mainchart.Visible = false;
+            // 
+            // button_top5
+            // 
+            this.button_top5.BackColor = System.Drawing.Color.White;
+            this.button_top5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_top5.Location = new System.Drawing.Point(150, 565);
+            this.button_top5.Name = "button_top5";
+            this.button_top5.Size = new System.Drawing.Size(112, 35);
+            this.button_top5.TabIndex = 23;
+            this.button_top5.Text = "Top 5";
+            this.button_top5.UseVisualStyleBackColor = false;
+            this.button_top5.Visible = false;
+            this.button_top5.Click += new System.EventHandler(this.button_top5_Click);
+            // 
+            // chart1
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
+            this.chart1.Location = new System.Drawing.Point(371, 71);
+            this.chart1.Name = "chart1";
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series12.Legend = "Legend1";
+            series12.Name = "Gemiddelde verkoopprijs";
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series13.Legend = "Legend1";
+            series13.Name = "Ontwikkeling gemiddelde verkoopprijs";
+            this.chart1.Series.Add(series12);
+            this.chart1.Series.Add(series13);
+            this.chart1.Size = new System.Drawing.Size(671, 413);
+            this.chart1.TabIndex = 24;
+            this.chart1.Text = "chart1";
+            this.chart1.Visible = false;
+            // 
+            // checkBox2012_2
+            // 
+            this.checkBox2012_2.AutoSize = true;
+            this.checkBox2012_2.Location = new System.Drawing.Point(169, 95);
+            this.checkBox2012_2.Name = "checkBox2012_2";
+            this.checkBox2012_2.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2012_2.TabIndex = 25;
+            this.checkBox2012_2.Text = "2012";
+            this.checkBox2012_2.UseVisualStyleBackColor = true;
+            this.checkBox2012_2.Visible = false;
+            this.checkBox2012_2.CheckedChanged += new System.EventHandler(this.checkBox2012_2_CheckedChanged);
+            // 
+            // checkBox2013_2
+            // 
+            this.checkBox2013_2.AutoSize = true;
+            this.checkBox2013_2.Location = new System.Drawing.Point(169, 125);
+            this.checkBox2013_2.Name = "checkBox2013_2";
+            this.checkBox2013_2.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2013_2.TabIndex = 26;
+            this.checkBox2013_2.Text = "2013";
+            this.checkBox2013_2.UseVisualStyleBackColor = true;
+            this.checkBox2013_2.Visible = false;
+            this.checkBox2013_2.CheckedChanged += new System.EventHandler(this.checkBox2013_2_CheckedChanged);
+            // 
+            // checkBox2015_2
+            // 
+            this.checkBox2015_2.AutoSize = true;
+            this.checkBox2015_2.Location = new System.Drawing.Point(169, 185);
+            this.checkBox2015_2.Name = "checkBox2015_2";
+            this.checkBox2015_2.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2015_2.TabIndex = 28;
+            this.checkBox2015_2.Text = "2015";
+            this.checkBox2015_2.UseVisualStyleBackColor = true;
+            this.checkBox2015_2.Visible = false;
+            this.checkBox2015_2.CheckedChanged += new System.EventHandler(this.checkBox2015_2_CheckedChanged);
+            // 
+            // checkBox2014_2
+            // 
+            this.checkBox2014_2.AutoSize = true;
+            this.checkBox2014_2.Location = new System.Drawing.Point(169, 155);
+            this.checkBox2014_2.Name = "checkBox2014_2";
+            this.checkBox2014_2.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2014_2.TabIndex = 27;
+            this.checkBox2014_2.Text = "2014";
+            this.checkBox2014_2.UseVisualStyleBackColor = true;
+            this.checkBox2014_2.Visible = false;
+            this.checkBox2014_2.CheckedChanged += new System.EventHandler(this.checkBox2014_2_CheckedChanged);
+            // 
+            // checkBox2017_2
+            // 
+            this.checkBox2017_2.AutoSize = true;
+            this.checkBox2017_2.Location = new System.Drawing.Point(169, 245);
+            this.checkBox2017_2.Name = "checkBox2017_2";
+            this.checkBox2017_2.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2017_2.TabIndex = 30;
+            this.checkBox2017_2.Text = "2017";
+            this.checkBox2017_2.UseVisualStyleBackColor = true;
+            this.checkBox2017_2.Visible = false;
+            this.checkBox2017_2.CheckedChanged += new System.EventHandler(this.checkBox2017_2_CheckedChanged);
+            // 
+            // checkBox2016_2
+            // 
+            this.checkBox2016_2.AutoSize = true;
+            this.checkBox2016_2.Location = new System.Drawing.Point(169, 215);
+            this.checkBox2016_2.Name = "checkBox2016_2";
+            this.checkBox2016_2.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2016_2.TabIndex = 29;
+            this.checkBox2016_2.Text = "2016";
+            this.checkBox2016_2.UseVisualStyleBackColor = true;
+            this.checkBox2016_2.Visible = false;
+            this.checkBox2016_2.CheckedChanged += new System.EventHandler(this.checkBox2016_2_CheckedChanged);
+            // 
+            // checkBox2012_2017
+            // 
+            this.checkBox2012_2017.AutoSize = true;
+            this.checkBox2012_2017.Location = new System.Drawing.Point(169, 275);
+            this.checkBox2012_2017.Name = "checkBox2012_2017";
+            this.checkBox2012_2017.Size = new System.Drawing.Size(83, 17);
+            this.checkBox2012_2017.TabIndex = 31;
+            this.checkBox2012_2017.Text = "2012 - 2017";
+            this.checkBox2012_2017.UseVisualStyleBackColor = true;
+            this.checkBox2012_2017.Visible = false;
+            this.checkBox2012_2017.CheckedChanged += new System.EventHandler(this.checkBox2012_2017_CheckedChanged);
+            // 
+            // checkBox2017_1
+            // 
+            this.checkBox2017_1.AutoSize = true;
+            this.checkBox2017_1.Checked = true;
+            this.checkBox2017_1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2017_1.Location = new System.Drawing.Point(293, 234);
+            this.checkBox2017_1.Name = "checkBox2017_1";
+            this.checkBox2017_1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2017_1.TabIndex = 37;
+            this.checkBox2017_1.Text = "2017";
+            this.checkBox2017_1.UseVisualStyleBackColor = true;
+            this.checkBox2017_1.Visible = false;
+            // 
+            // checkBox2016_1
+            // 
+            this.checkBox2016_1.AutoSize = true;
+            this.checkBox2016_1.Checked = true;
+            this.checkBox2016_1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2016_1.Location = new System.Drawing.Point(293, 204);
+            this.checkBox2016_1.Name = "checkBox2016_1";
+            this.checkBox2016_1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2016_1.TabIndex = 36;
+            this.checkBox2016_1.Text = "2016";
+            this.checkBox2016_1.UseVisualStyleBackColor = true;
+            this.checkBox2016_1.Visible = false;
+            // 
+            // checkBox2015_1
+            // 
+            this.checkBox2015_1.AutoSize = true;
+            this.checkBox2015_1.Checked = true;
+            this.checkBox2015_1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2015_1.Location = new System.Drawing.Point(293, 174);
+            this.checkBox2015_1.Name = "checkBox2015_1";
+            this.checkBox2015_1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2015_1.TabIndex = 35;
+            this.checkBox2015_1.Text = "2015";
+            this.checkBox2015_1.UseVisualStyleBackColor = true;
+            this.checkBox2015_1.Visible = false;
+            // 
+            // checkBox2014_1
+            // 
+            this.checkBox2014_1.AutoSize = true;
+            this.checkBox2014_1.Checked = true;
+            this.checkBox2014_1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2014_1.Location = new System.Drawing.Point(293, 144);
+            this.checkBox2014_1.Name = "checkBox2014_1";
+            this.checkBox2014_1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2014_1.TabIndex = 34;
+            this.checkBox2014_1.Text = "2014";
+            this.checkBox2014_1.UseVisualStyleBackColor = true;
+            this.checkBox2014_1.Visible = false;
+            // 
+            // checkBox2013_1
+            // 
+            this.checkBox2013_1.AutoSize = true;
+            this.checkBox2013_1.Checked = true;
+            this.checkBox2013_1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2013_1.Location = new System.Drawing.Point(293, 114);
+            this.checkBox2013_1.Name = "checkBox2013_1";
+            this.checkBox2013_1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2013_1.TabIndex = 33;
+            this.checkBox2013_1.Text = "2013";
+            this.checkBox2013_1.UseVisualStyleBackColor = true;
+            this.checkBox2013_1.Visible = false;
+            // 
+            // checkBox2012_1
+            // 
+            this.checkBox2012_1.AutoSize = true;
+            this.checkBox2012_1.Checked = true;
+            this.checkBox2012_1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2012_1.Location = new System.Drawing.Point(293, 84);
+            this.checkBox2012_1.Name = "checkBox2012_1";
+            this.checkBox2012_1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox2012_1.TabIndex = 32;
+            this.checkBox2012_1.Text = "2012";
+            this.checkBox2012_1.UseVisualStyleBackColor = true;
+            this.checkBox2012_1.Visible = false;
+            // 
+            // button_load_chart
+            // 
+            this.button_load_chart.BackColor = System.Drawing.Color.White;
+            this.button_load_chart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_load_chart.Location = new System.Drawing.Point(930, 500);
+            this.button_load_chart.Name = "button_load_chart";
+            this.button_load_chart.Size = new System.Drawing.Size(112, 35);
+            this.button_load_chart.TabIndex = 38;
+            this.button_load_chart.Text = "Load chart";
+            this.button_load_chart.UseVisualStyleBackColor = false;
+            this.button_load_chart.Visible = false;
+            this.button_load_chart.Click += new System.EventHandler(this.button_load_chart_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(293, 71);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(749, 243);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(293, 320);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(749, 230);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // button_show_cars
+            // 
+            this.button_show_cars.BackColor = System.Drawing.Color.White;
+            this.button_show_cars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_show_cars.Location = new System.Drawing.Point(930, 565);
+            this.button_show_cars.Name = "button_show_cars";
+            this.button_show_cars.Size = new System.Drawing.Size(112, 35);
+            this.button_show_cars.TabIndex = 41;
+            this.button_show_cars.Text = "Show cars";
+            this.button_show_cars.UseVisualStyleBackColor = false;
+            this.button_show_cars.Visible = false;
+            this.button_show_cars.Click += new System.EventHandler(this.button_show_cars_Click);
+            // 
+            // button_back
+            // 
+            this.button_back.BackColor = System.Drawing.Color.White;
+            this.button_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_back.Location = new System.Drawing.Point(150, 565);
+            this.button_back.Name = "button_back";
+            this.button_back.Size = new System.Drawing.Size(112, 35);
+            this.button_back.TabIndex = 42;
+            this.button_back.Text = "Back";
+            this.button_back.UseVisualStyleBackColor = false;
+            this.button_back.Visible = false;
+            this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
             // project_3
             // 
@@ -706,6 +996,26 @@
             this.Controls.Add(this.question_1);
             this.Controls.Add(this.top_bar);
             this.Controls.Add(this.side_bar);
+            this.Controls.Add(this.button_show_cars);
+            this.Controls.Add(this.button_load_chart);
+            this.Controls.Add(this.checkBox2017_1);
+            this.Controls.Add(this.checkBox2016_1);
+            this.Controls.Add(this.checkBox2015_1);
+            this.Controls.Add(this.checkBox2014_1);
+            this.Controls.Add(this.checkBox2013_1);
+            this.Controls.Add(this.checkBox2012_1);
+            this.Controls.Add(this.checkBox2012_2017);
+            this.Controls.Add(this.checkBox2017_2);
+            this.Controls.Add(this.checkBox2016_2);
+            this.Controls.Add(this.checkBox2015_2);
+            this.Controls.Add(this.checkBox2014_2);
+            this.Controls.Add(this.checkBox2013_2);
+            this.Controls.Add(this.checkBox2012_2);
+            this.Controls.Add(this.button_back);
+            this.Controls.Add(this.button_top5);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.ov_2_mainchart);
             this.Controls.Add(this.ov_1_mainchart);
             this.Name = "project_3";
@@ -717,15 +1027,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.ov_1_maintb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ov_2_mainchart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ov_1_mainchart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
         private System.Windows.Forms.PictureBox side_bar;
         private System.Windows.Forms.PictureBox top_bar;
+        private System.Windows.Forms.Button button_top5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.CheckBox checkBox2012_2;
+        private System.Windows.Forms.CheckBox checkBox2013_2;
+        private System.Windows.Forms.CheckBox checkBox2015_2;
+        private System.Windows.Forms.CheckBox checkBox2014_2;
+        private System.Windows.Forms.CheckBox checkBox2017_2;
+        private System.Windows.Forms.CheckBox checkBox2016_2;
+        private System.Windows.Forms.CheckBox checkBox2012_2017;
+        private System.Windows.Forms.CheckBox checkBox2017_1;
+        private System.Windows.Forms.CheckBox checkBox2016_1;
+        private System.Windows.Forms.CheckBox checkBox2015_1;
+        private System.Windows.Forms.CheckBox checkBox2014_1;
+        private System.Windows.Forms.CheckBox checkBox2013_1;
+        private System.Windows.Forms.CheckBox checkBox2012_1;
+        private System.Windows.Forms.Button button_load_chart;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button_show_cars;
+        private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.Button question_1;
         private System.Windows.Forms.Button question_2;
         private System.Windows.Forms.Button question_3;
